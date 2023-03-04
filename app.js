@@ -1,5 +1,5 @@
 window.onload = function () {
-  document.getElementById("stroke-mod").click();
+  document.getElementsByName("radio")[0].click();
 };
 const changeMod = document.querySelector("#radio-group");
 const saveBtn = document.getElementById("save");
