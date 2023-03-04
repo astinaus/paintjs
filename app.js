@@ -26,15 +26,9 @@ let isFill;
 
 function onMove(event) {
   if (isPainting) {
-    if (!isFill) {
-      ctx.lineTo(event.offsetX, event.offsetY);
-      ctx.stroke();
-      return;
-    } else {
-      ctx.lineTo(event.offsetX, event.offsetY);
-      ctx.fill();
-      return;
-    }
+    ctx.lineTo(event.offsetX, event.offsetY);
+    ctx.stroke();
+    return;
   }
   ctx.beginPath();
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -46,6 +40,9 @@ function startPainting() {
 
 function cancelPainting() {
   isPainting = false;
+  if (isFill) {
+    ctx.fill();
+  }
 }
 
 function onLineWidthCahnge(event) {

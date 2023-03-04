@@ -14,7 +14,7 @@ https://nomadcoders.co/javascript-for-beginners-2/lobby
 ## 💡기능
 
 
-🖌️ 1. 그림을 그릴 수 있습니다.
+🖌️ 1. 그림을 그릴 수 있습니다. stroke 모드가 기본이며 fill 모드 체크 시, 색칠된 모양으로 그릴 수 있습니다.
 
 📷 2. 사진을 불러와서 사진 위에 그림을 그릴 수 있습니다.
 
