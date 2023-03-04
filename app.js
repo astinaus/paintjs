@@ -22,7 +22,7 @@ ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
-let isFill;
+let isFill= false;
 
 function onMove(event) {
   if (isPainting) {
@@ -125,10 +125,8 @@ function onSaveClick() {
 function changeDrawingMod(event) {
   if (event.target.value == "stroke") {
     isFill = false;
-    console.log(event.target.value);
   } else {
     isFill = true;
-    console.log(event.target.value);
   }
 }
 
