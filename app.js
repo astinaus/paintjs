@@ -1,3 +1,7 @@
+window.onload = function () {
+  document.getElementById("stroke-mod").click();
+};
+const changeMod = document.querySelector("#radio-group");
 const saveBtn = document.getElementById("save");
 const textInput = document.getElementById("text");
 const fileInput = document.getElementById("file");
@@ -18,12 +22,19 @@ ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
+let isFill;
 
 function onMove(event) {
   if (isPainting) {
-    ctx.lineTo(event.offsetX, event.offsetY);
-    ctx.stroke();
-    return;
+    if (!isFill) {
+      ctx.lineTo(event.offsetX, event.offsetY);
+      ctx.stroke();
+      return;
+    } else {
+      ctx.lineTo(event.offsetX, event.offsetY);
+      ctx.fill();
+      return;
+    }
   }
   ctx.beginPath();
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -114,6 +125,16 @@ function onSaveClick() {
   a.click();
 }
 
+function changeDrawingMod(event) {
+  if (event.target.value == "stroke") {
+    isFill = false;
+    console.log(event.target.value);
+  } else {
+    isFill = true;
+    console.log(event.target.value);
+  }
+}
+
 canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPainting);
@@ -128,3 +149,4 @@ destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
+changeMod.addEventListener("change", changeDrawingMod);

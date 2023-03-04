@@ -57,7 +57,8 @@ input#color {
 }
 
 button,
-label {
+label,
+span {
   all: unset;
   padding: 10px 0px;
   text-align: center;

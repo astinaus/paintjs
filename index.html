@@ -69,6 +69,22 @@
     </div>
     <canvas></canvas>
     <div class="btns">
+      <label id="radio-group">
+        <input
+          type="radio"
+          name="radio"
+          value="stroke"
+          id="stroke-mod"
+          onclick="changeDrawingMod(event)"
+        />✏️Stroke
+        <input
+          type="radio"
+          name="radio"
+          value="fill"
+          id="fill-mod"
+          onclick="changeDrawingMod(event)"
+        />🖌️Fill
+      </label>
       <input
         id="line-width"
         type="range"
