@@ -1,8 +1,8 @@
-# 🖼️그림판 만들기
+# 🖼️MEME-MAKER 만들기
 
 <br>
 
-## ❤️NomadCoder에서 제공하는 무료 강의를 기반으로 만든 그림판 사이트입니다.
+## ❤️NomadCoder에서 제공하는 무료 강의를 기반으로 만든 MEME-MAKER 사이트입니다.
 https://nomadcoders.co/javascript-for-beginners-2/lobby
 
 <br>
