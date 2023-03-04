@@ -73,7 +73,7 @@ function onDestroyClick() {
 function onEraserClick() {
   ctx.strokeStyle = "white";
   isFilling = false;
-  modeBtn = innerText("Fill");
+  modeBtn.innerText = "Fill";
 }
 
 canvas.addEventListener("mousemove", onMove);
