@@ -1,7 +1,7 @@
 window.onload = function () {
   document.getElementsByName("radio")[0].click();
 };
-
+const fontSize = document.getElementById("font-size");
 const fontSelect = document.getElementById("font-select");
 const changeMod = document.querySelector("#radio-group");
 const saveBtn = document.getElementById("save");
@@ -108,15 +108,12 @@ function onFileChange(event) {
 function onDoubleClick(event) {
   const text = textInput.value;
   const font = fontSelect.value;
-
-  // const size = fontSize.value;
+  const size = fontSize.value;
 
   if (text !== "") {
     ctx.save();
     ctx.lineWidth = 1;
-    // ctx.font = size + "px " + font;
-    ctx.font = "48px " + font;
-    console.log(ctx.font);
+    ctx.font = size + "px " + font;
     ctx.fillText(text, event.offsetX, event.offsetY);
     textInput.value = null;
     ctx.restore();
@@ -143,6 +140,10 @@ function fontSelectBoxChange(event) {
   fontSelect.style.fontFamily = `${event.target.value}`;
 }
 
+// function fontSizeChange(event) {
+//   // console.log(event.target.value);
+// }
+
 canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPainting);
@@ -159,3 +160,4 @@ fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
 changeMod.addEventListener("change", changeDrawingMod);
 fontSelect.addEventListener("change", fontSelectBoxChange);
+// fontSize.addEventListener("change", fontSizeChange);
