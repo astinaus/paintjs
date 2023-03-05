@@ -1,4 +1,32 @@
 @import "reset.css";
+@font-face {
+  font-family: "YiSunShinDotumM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YiSunShinDotumM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RixMomsBlanketR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/RixMomsBlanketR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KyoboHandwriting2021sjy";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dovemayo_gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   display: flex;
@@ -57,7 +85,8 @@ input#color {
 }
 
 button,
-label {
+label,
+select {
   all: unset;
   padding: 10px 0px;
   text-align: center;
@@ -70,7 +99,9 @@ label {
   box-shadow: 4px 4px 10px rgb(185, 177, 177);
 }
 
-button:hover {
+button:hover,
+label:hover,
+select:hover {
   opacity: 0.85;
 }
 
@@ -85,4 +116,21 @@ input#text {
 
 input#file {
   display: none;
+}
+
+select > option:nth-child(1) {
+  font-family: sans-serif;
+}
+
+select > option:nth-child(2) {
+  font-family: "Dovemayo_gothic";
+}
+select > option:nth-child(3) {
+  font-family: "KyoboHandwriting2021sjy";
+}
+select > option:nth-child(4) {
+  font-family: "RixMomsBlanketR";
+}
+select > option:nth-child(5) {
+  font-family: "YiSunShinDotumM";
 }
